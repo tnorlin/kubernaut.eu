@@ -1,4 +1,4 @@
 baseURL = 'https://blog.kubernaut.eu/'
 languageCode = 'en-us'
-title = 'The Kubernaut'
+title = 'the Kubernaut'
 theme = "beautifulhugo"
