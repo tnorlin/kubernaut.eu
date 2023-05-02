@@ -2,10 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.kubernaut.eu/categories/</loc>
+    <loc>https://kubernaut.eu/posts/</loc>
+    <lastmod>2023-05-02T15:13:30+02:00</lastmod>
   </url><url>
-    <loc>https://blog.kubernaut.eu/tags/</loc>
+    <loc>https://kubernaut.eu/</loc>
+    <lastmod>2023-05-02T15:13:30+02:00</lastmod>
   </url><url>
-    <loc>https://blog.kubernaut.eu/</loc>
+    <loc>https://kubernaut.eu/posts/my-first-post/</loc>
+    <lastmod>2023-05-02T15:13:30+02:00</lastmod>
+  </url><url>
+    <loc>https://kubernaut.eu/categories/</loc>
+  </url><url>
+    <loc>https://kubernaut.eu/tags/</loc>
   </url>
 </urlset>

@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on The Kubernaut</title>
-    <link>https://blog.kubernaut.eu/tags/</link>
+    <link>https://kubernaut.eu/tags/</link>
     <description>Recent content in Tags on The Kubernaut</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://blog.kubernaut.eu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://kubernaut.eu/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
