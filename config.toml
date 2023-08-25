@@ -1,4 +1,0 @@
-baseURL = 'https://kubernaut.eu/'
-languageCode = 'en-us'
-title = 'The Kubernaut'
-theme = "beautifulhugo"
