@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About kubernaut"
 ---
 
-The Kubernaut is a blog about technologies that captured the interest of its author Tony Norlin. The author also has an interest in Italian food culture and intends to write about pasta, pizza and coffe at [tnorlin.se](https://tnorlin.se).
+The Kubernaut is a blog about technologies that captured the interest of its author Tony Norlin. The author also has an interest in Italian food culture and intends to write about pasta, pizza and coffee at [tnorlin.se](https://tnorlin.se).
 
 
 <div>
