@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>the Kubernaut</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -40,20 +40,29 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </svg>
       </a>
 
+
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+<div class="grid-container">
+<div>
+  <img src="/assets/kubernaut-eu-logo.png" class="sm:w-2/3 mx-auto" alt="Tony Norlin">
+</div>
+<div>
+        Homelab tinkerer. ❤ OpenSource. Writes about illumos, BSD, Kubernetes, 
+        Linux, networking and security. Prefers vanilla kubernetes that are
+        complemented with Cilium as observability and networking stack. 
+        Dtrace and all projects based on eBPF catches my interest (except
+        MS Windows, sorry thats where my red line goes).
+</div>
+</div>
       </p>
       <p>
-        Read the blog posts or check
+        Read the blog posts or connect with me on
         <LinkButton
           className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="https://www.linkedin.com/in/tonynorlin/"
         >
-          README
-        </LinkButton> for more info.
+          LinkedIn 
+        </LinkButton> .
       </p>
       {
         // only display if at least one social link is enabled
