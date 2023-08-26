@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Giscus from '@giscus/react';
 
@@ -11,9 +10,7 @@ const Comments = () => {
     setMounted(true);
   }, []);
 
-  return (
-    <div id={id}>
-      {mounted ? (
+  return mounted ? (
         <Giscus
           id={id}
           repo="tnorlin/kubernaut.eu"
@@ -27,9 +24,7 @@ const Comments = () => {
           lang="en"
           loading="lazy"
         />
-      ) : null}
-    </div>
-  );
-};
+      ) : null
+  };
 
 export default Comments;
