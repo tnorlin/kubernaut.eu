@@ -132,3 +132,20 @@ Here is an example of changing the light color scheme.
 ```
 
 > Check out some [predefined color schemes](https://astro-paper.pages.dev/posts/predefined-color-schemes/) AstroPaper has already crafted for you.
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="tnorlin/kubernaut.eu"
+        data-repo-id="R_kgDOIXRBqw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOIXRBq84CY4YN"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
