@@ -7,7 +7,6 @@ import Footer from "@components/Footer.astro";
 import Card from "@components/Card";
 import LinkButton from "@components/LinkButton.astro";
 import slugify from "@utils/slugify";
-import Comments from '@components/Comments';
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
@@ -76,24 +75,3 @@ const next = pageNum < totalPages ? "" : "disabled";
     @apply group-hover:!fill-skin-base;
   }
 </style>
-<script src="https://giscus.app/client.js"
-        data-repo="tnorlin/kubernaut.eu"
-        data-repo-id="R_kgDOIXRBqw"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOIXRBq84CY4YN"
-        data-mapping="pathname"
-        data-strict="1"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-<article class="mdx">
-  <slot />
-</article>
-<Comments client:idle />
