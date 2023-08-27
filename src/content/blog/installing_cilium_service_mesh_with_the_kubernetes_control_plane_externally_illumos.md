@@ -97,17 +97,21 @@ The output in Hubble, however, will be a bit different as it will display more c
 
 **Working control plane — and worker nodes**
 
-This (friend links, no paywall) are the concepts for getting the control plane up and running, as well as bringing the worker nodes up.
-[**Build a managed Kubernetes cluster from scratch — part 1**
-*The adventures in the Home Lab environment proceed (when time allows), and with concepts taken from the the earlier…*medium.com](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)
-[**Build a managed Kubernetes cluster from scratch — part 2**
-*Its been a while since part one of this series where I intend to describe how one can build a managed cluster from…*medium.com](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-2-e8ca6c2cc45c)
-[**Build a managed Kubernetes cluster from scratch — part 3**
-*As the cluster now has a solid foundation with an external Certificate Authority and the Control Plane is in place, it…*medium.com](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-3-10dec988757)
-[**Build a managed Kubernetes cluster from scratch — part 4**
-*Implementing a first stage of Service Mesh*medium.com](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-4-3856f0756a03)
-[**Build a managed Kubernetes cluster from scratch — part 5**
-*Will this finally be the last part of this series?*medium.com](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-5-a4c22f0c0245)
+This (friend links, no paywall) are the concepts for getting the control plane up and running, as well as bringing the worker nodes up. (they will be imported here in time):
+
+**[Build a managed Kubernetes cluster from scratch — part 1](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)**
+
+**[Build a managed Kubernetes cluster from scratch — part 2](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)**
+
+**[Build a managed Kubernetes cluster from scratch — part 3](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)**
+
+**[Build a managed Kubernetes cluster from scratch — part 4](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)**
+
+**[Build a managed Kubernetes cluster from scratch — part 5](https://medium.com/@norlin.t/build-a-managed-kubernetes-cluster-from-scratch-part-1-fca5f6b3639b)**
+
+
+
+
 
 **BGP**
 
@@ -195,8 +199,7 @@ As we will deploy Cilium with resources of kind ServiceMonitors that define what
 **Gateway API CRD v0.5.1**
 
 While it appears not strictly necessary to install before Cilium (or rather, when we deploy a Gateway or HTTPRoute), but it makes no sense to delay what’s necessary.
-[**Gateway API Support - Cilium 1.13.3 documentation**
-*helm upgrade cilium cilium/cilium --version 1.13.3 \ --namespace kube-system \ --reuse-values \ --set…*docs.cilium.io](https://docs.cilium.io/en/v1.13/network/servicemesh/gateway-api/gateway-api/#prerequisites)
+**[Gateway API Support - Cilium 1.13.3 documentation](https://docs.cilium.io/en/v1.13/network/servicemesh/gateway-api/gateway-api/#prerequisites)**
 
     kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/gateway-api/v0.5.1/config/crd/standard/gateway.networking.k8s.io_gatewayclasses.yaml
     kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/gateway-api/v0.5.1/config/crd/standard/gateway.networking.k8s.io_gateways.yaml
