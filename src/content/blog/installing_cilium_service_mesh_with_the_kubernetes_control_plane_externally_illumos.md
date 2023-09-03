@@ -1,5 +1,5 @@
 ---
-title: Installing Cilium Service Mesh with the Kubernetes Control Plane externally (illumos) 
+title: Install Cilium Service Mesh /w external Control Plane (illumos)
 author: Tony Norlin
 pubDatetime: 2023-08-26T15:57:52.737Z
 postSlug: installing_cilium_service_mesh_with_the_kubernetes_control_plane_externally_illumos
