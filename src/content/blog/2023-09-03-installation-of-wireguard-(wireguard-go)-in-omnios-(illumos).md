@@ -200,6 +200,7 @@ To have packets be able to traverse from client VLAN to OOB VLAN, IP forwarding 
     EOF
 
 Initiate traffic and check (troubleshoot) with:
+
     svcadm enable network/ipfilter
     svcs -xv
     ipnat -l
