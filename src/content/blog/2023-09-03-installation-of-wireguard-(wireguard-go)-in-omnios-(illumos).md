@@ -167,7 +167,9 @@ Clean up the tunnel (reboot the zone?) and create the service as below.
         <service name="network/wireguard" type="service" version="1" >
             <create_default_instance enabled="true" />
             <dependency name="dep1" grouping="require_all" restart_on="error" type="service" >
-                <service_fmri value="svc:/milestone/multi-user:default" />
+                <service_fmri value='svc:/network/ipfilter:default' />
+                <service_fmri value='svc:/network/physical:default' />
+                <service_fmri value='svc:/network/ipv4-forwarding:default' />
             </dependency>
             <exec_method type="method" name="start" exec="/opt/ooce/bin/wg-quick up tun0&amp;" timeout_seconds="10" />
             <exec_method type="method" name="stop" exec=":kill" timeout_seconds="30" />
