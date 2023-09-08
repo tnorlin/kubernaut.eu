@@ -28,13 +28,6 @@ I had almost a week to prepare a demo (mostly based on the [https://github.com/i
 Unfortunately, with limited time I was only showing a subset of what I initially had in mind, but at least I managed to put up a demo and the Demo Gods were quite nice to me:
 
 
----
-import { YouTube } from '@astro-community/astro-embed-youtube';
----
-
-<YouTube id="GEeevZFPMWU" />
-
-
 <YouTube id="https://www.youtube.com/watch?v=GEeevZFPMWU" />
 
 The demo preparations was done in my ordinary environment, which happens to run an external Control Plane (in my port of [Kubernetes to illumos](https://github.com/tnorlin/kubernetes)), placed in another network segment (VLAN) than the Data Plane.
