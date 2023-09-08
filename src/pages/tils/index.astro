@@ -1,0 +1,18 @@
+---
+import { SITE } from "@config";
+import TIL from "@layouts/Tils.astro";
+import getSortedTils from "@utils/getSortedTils";
+import getPageNumbers from "@utils/getPageNumbers";
+
+import { getCollection } from "astro:content";
+
+const tils = await getCollection("tils");
+
+const sortedTils = getSortedTils(tils);
+
+const totalPages = getPageNumbers(sortedTils.length);
+
+const paginatedTils = sortedTils.slice(0, SITE.postPerPage);
+---
+
+<TIL tils={paginatedTils} pageNum={1} totalPages={totalPages.length} />
