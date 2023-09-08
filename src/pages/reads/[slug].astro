@@ -1,0 +1,58 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Reads from "@layouts/Reads.astro";
+import ReadDetails from "@layouts/ReadDetails.astro";
+import getSortedReads from "@utils/getSortedReads";
+import getPageNumbers from "@utils/getPageNumbers";
+import slugify from "@utils/slugify";
+import { SITE } from "@config";
+
+export interface Props {
+  read: CollectionEntry<"reads">;
+}
+
+export async function getStaticPaths() {
+  const reads = await getCollection("reads", ({ data }) => !data.draft);
+
+  const readResult = reads.map(read => ({
+    params: { slug: slugify(read.data) },
+    props: { read },
+  }));
+
+  const pagePaths = getPageNumbers(reads.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...readResult, ...pagePaths];
+}
+
+const { slug } = Astro.params;
+const { read } = Astro.props;
+
+const reads = await getCollection("reads");
+
+const sortedReads = getSortedReads(reads);
+
+const totalPages = getPageNumbers(sortedReads.length);
+
+const currentPage =
+  slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
+    ? Number(slug)
+    : 0;
+const lastPost = currentPage * SITE.postPerPage;
+const startPost = lastPost - SITE.postPerPage;
+
+const paginatedReads = sortedReads.slice(startPost, lastPost);
+---
+
+{
+  read ? (
+    <ReadDetails read={read} />
+  ) : (
+    <Reads
+      reads={paginatedReads}
+      pageNum={currentPage}
+      totalPages={totalPages.length}
+    />
+  )
+}
