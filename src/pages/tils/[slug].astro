@@ -1,0 +1,58 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import TIL from "@layouts/Tils.astro";
+import TilDetails from "@layouts/TilDetails.astro";
+import getSortedTils from "@utils/getSortedTils";
+import getPageNumbers from "@utils/getPageNumbers";
+import slugify from "@utils/slugify";
+import { SITE } from "@config";
+
+export interface Props {
+  til: CollectionEntry<"tils">;
+}
+
+export async function getStaticPaths() {
+  const tils = await getCollection("tils", ({ data }) => !data.draft);
+
+  const tilResult = tils.map(til => ({
+    params: { slug: slugify(til.data) },
+    props: { til },
+  }));
+
+  const pagePaths = getPageNumbers(tils.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...tilResult, ...pagePaths];
+}
+
+const { slug } = Astro.params;
+const { til } = Astro.props;
+
+const tils = await getCollection("tils");
+
+const sortedTils = getSortedTils(tils);
+
+const totalPages = getPageNumbers(sortedTils.length);
+
+const currentPage =
+  slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
+    ? Number(slug)
+    : 0;
+const lastPost = currentPage * SITE.postPerPage;
+const startPost = lastPost - SITE.postPerPage;
+
+const paginatedTils = sortedTils.slice(startPost, lastPost);
+---
+
+{
+  til ? (
+    <TilDetails til={til} />
+  ) : (
+    <TIL
+      tils={paginatedTils}
+      pageNum={currentPage}
+      totalPages={totalPages.length}
+    />
+  )
+}
