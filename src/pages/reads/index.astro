@@ -1,0 +1,18 @@
+---
+import { SITE } from "@config";
+import Reads from "@layouts/Reads.astro";
+import getSortedReads from "@utils/getSortedReads";
+import getPageNumbers from "@utils/getPageNumbers";
+
+import { getCollection } from "astro:content";
+
+const reads = await getCollection("reads");
+
+const sortedReads = getSortedReads(reads);
+
+const totalPages = getPageNumbers(sortedReads.length);
+
+const paginatedReads = sortedReads.slice(0, SITE.postPerPage);
+---
+
+<Reads reads={paginatedReads} pageNum={1} totalPages={totalPages.length} />

@@ -5,4 +5,5 @@ const blog = defineCollection({
   schema: blogSchema,
 });
 
+
 export const collections = { blog };
