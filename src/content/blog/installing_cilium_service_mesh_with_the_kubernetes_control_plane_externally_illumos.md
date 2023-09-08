@@ -27,6 +27,7 @@ I had almost a week to prepare a demo (mostly based on the [https://github.com/i
 
 Unfortunately, with limited time I was only showing a subset of what I initially had in mind, but at least I managed to put up a demo and the Demo Gods were quite nice to me:
 
+https://www.youtube.com/watch?v=GEeevZFPMWU
 
 <YouTube id="https://www.youtube.com/watch?v=GEeevZFPMWU" />
 
