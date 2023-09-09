@@ -3,6 +3,7 @@ title: Oxide is the first computer company since SUN
 author: Tony Norlin
 description: "Today I learned that Oxide Computer Company is the first computer company since SUN Microsystems."
 pubDatetime: 2023-09-08T14:13:51.279Z
+tags: [suntember, omnios, sun, solaris, oxide, illumos]
 draft: false
 ---
 
