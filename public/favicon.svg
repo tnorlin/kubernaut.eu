@@ -114,7 +114,7 @@
        xlink:href="#linear-gradient-2" />
   </defs>
   <style
-     id="style3">&#10;    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}&#10;  </style>
+     id="style3">&#10;    @media (prefers-color-scheme:dark)&#10;  </style>
   <g
      id="g1"
      transform="matrix(0.05084958,0,0,0.03323521,7.4249892,1.5340592)">
