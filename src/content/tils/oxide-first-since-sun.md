@@ -1,7 +1,7 @@
 ---
-title: 2023-09-08 Oxide is the first computer company since SUN
+title: Oxide is the first computer company since SUN
 author: Tony Norlin
-description: "Oxide Computer Company is the first computer company since SUN Microsystems."
+description: "Today I learned that Oxide Computer Company is the first computer company since SUN Microsystems."
 pubDatetime: 2023-09-08T14:13:51.279Z
 draft: false
 ---
@@ -17,7 +17,8 @@ Those were the words of Scott McNealy during a panel in January 2006 and that ma
 <YouTube id="https://youtu.be/dkmzb904tG0?t=2895" />
 
 
-While Oxide don't design their own CPU (yet?)  ..but if that is a criteria, none is actually a computer company anymore. They are designing just about everything else in their rack and with a great sense in both details and estetics (I mean, just grabbing the PCI Vendor ID of 01DE - #​define PCI_VENDOR_ID_OXIDE 0x1DE).
+While Oxide don't design their own CPU (yet?)  ..but if that is a criteria, none is actually a computer company anymore. They are designing just about everything else in their rack and with a great sense in both details and estetics (I mean, just grabbing the PCI Vendor ID of 01DE makes on think on how far you can stretch)
+>  #​define PCI_VENDOR_ID_OXIDE 0x1DE
 
 Companies such as Dell and Supermicro are designing Server Boards, but they are mostly assembling it together with some 3rd party hardware and reselling the parts, together with firmware blobs. The end result is a monster that is hard to control.
 
