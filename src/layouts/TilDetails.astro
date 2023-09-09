@@ -37,6 +37,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
+    <p>Today I Learned.</p>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
@@ -55,5 +56,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  #main-content p {
+    @apply mb-6 mt-2 italic;
   }
 </style>
