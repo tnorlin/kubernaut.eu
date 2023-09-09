@@ -7,13 +7,13 @@ tags: [suntember, omnios, sun, solaris, oxide, illumos]
 draft: false
 ---
 
-After watching this YouTube clip I learned something... 
+After watching this [Youtube - Sun Microsystems Founders Panel](https://youtu.be/dkmzb904tG0?t=2895)
+clip I learned something... 
 
 > That's interesting, there haven't been any other computer companies that started after SUN, we were the last computer companies.. server companies.. 
 
 Those were the words of Scott McNealy during a panel in January 2006 and that made me realize that Oxide Computer Company now is the first computer company since SUN Microsystems! So long time, 40 years, served with only Personal Computer (PC) resellers...
 
-[Youtube](https://youtu.be/dkmzb904tG0?t=2895)
 
 <YouTube id="https://youtu.be/dkmzb904tG0?t=2895" />
 
