@@ -2,9 +2,11 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import Comments from '@components/Comments';
 import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@utils/slugify";
 
 export interface Props {
   til: CollectionEntry<"tils">;
@@ -12,7 +14,7 @@ export interface Props {
 
 const { til } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, pubDatetime } = til.data;
+const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } = til.data;
 
 const { Content } = await til.render();
 
@@ -41,7 +43,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
-
+    <ul class="tags-container">
+    </ul>
 <article class="mdx">
   <slot />
 </article>
@@ -59,5 +62,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   }
   #main-content p {
     @apply mb-6 mt-2 italic;
+  }
+  .tags-container {
+    @apply my-8;
   }
 </style>
