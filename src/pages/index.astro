@@ -8,10 +8,17 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import getSortedReads from "@utils/getSortedReads";
+import getSortedTils from "@utils/getSortedTils";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
+const tils = await getCollection("tils");
+const reads = await getCollection("reads");
+
+const sortedTils = getSortedTils(tils);
+const sortedReads = getSortedReads(reads);
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -123,9 +130,53 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </svg>
         </LinkButton>
       </div>
+    </section>
+    <section id="recent-reads">
+      <h2>Bookmarks</h2>
+      <ul>
+        {
+          sortedReads.map(
+            ({ data }, index) =>
+              index < 4 && (
+                <Card
+                  href={`/reads/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              )
+          )
+        }
+      </ul>
       <div class="all-reads-btn-wrapper">
         <LinkButton href="/reads">
           All bookmarks
+          <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+        </LinkButton>
+      </div>
+    </section>
+    <section id="recent-tils">
+      <h2>Today I learned</h2>
+      <ul>
+        {
+          sortedTils.map(
+            ({ data }, index) =>
+              index < 4 && (
+                <Card
+                  href={`/tils/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              )
+          )
+        }
+      </ul>
+      <div class="all-tils-btn-wrapper">
+        <LinkButton href="/tils">
+          All TIL content
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
               d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
@@ -172,10 +223,19 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
+  #recent-tils h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  #recent-reads h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
   }
   .all-reads-btn-wrapper {
+    @apply my-8 text-center;
+  }
+  .all-tils-btn-wrapper {
     @apply my-8 text-center;
   }
 </style>
