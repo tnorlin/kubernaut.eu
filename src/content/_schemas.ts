@@ -15,4 +15,18 @@ export const blogSchema = z
   })
   .strict();
 
+export const readSchema = z
+  .object({
+    author: z.string().optional(),
+    pubDatetime: z.date(),
+    title: z.string(),
+    postSlug: z.string().optional(),
+    draft: z.boolean().optional(),
+    ogImage: z.string().optional(),
+    description: z.string(),
+    canonicalURL: z.string().optional(),
+  })
+  .strict();
+
 export type BlogFrontmatter = z.infer<typeof blogSchema>;
+export type ReadFrontmatter = z.infer<typeof readSchema>;
