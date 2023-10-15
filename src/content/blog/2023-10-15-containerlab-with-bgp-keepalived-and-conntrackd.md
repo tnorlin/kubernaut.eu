@@ -1296,3 +1296,9 @@ Then, as that went smooth I began trying out how to let  two Kubernetes clusters
 I've published the files at my GitHub repo as well:
 
 https://github.com/tnorlin/containerlab-snat-demo
+
+Refs:
+https://www.sobyte.net/post/2022-09/containerlab-kind-cilium-bgp/
+https://www.linode.com/docs/products/compute/compute-instances/guides/failover-bgp-frr/
+https://www.brianlinkletter.com/2021/05/use-containerlab-to-emulate-open-source-routers/
+https://satishdotpatel.github.io/ha-with-keepalived-and-conntrackd/
