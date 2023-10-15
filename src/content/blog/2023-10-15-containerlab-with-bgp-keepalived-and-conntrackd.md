@@ -1281,6 +1281,15 @@ The deployment takes a minute or two. Then, when everything is deployed, and eve
       "RemoteAddr": "10.227.0.254:37910"
     }
 
+Traceroute looks like this (from a node in intbgp to a node in extbgp):
+
+    docker exec -it clab-k8s-inthost4 traceroute 10.237.0.8
+    traceroute to 10.237.0.8 (10.237.0.8), 30 hops max, 46 byte packets
+     1  10.227.0.254 (10.227.0.254)  1.775 ms  2.042 ms  1.462 ms
+     2  10.0.0.4 (10.0.0.4)  2.973 ms  2.161 ms  1.197 ms
+     3  10.237.0.8 (10.237.0.8)  2.314 ms  4.043 ms  3.303 ms
+
+
 Then, as that went smooth I began trying out how to let  two Kubernetes clusters spin up with Kind (I have to admit that this is my first attempt with Kind as my bhyve environment(s) have serve me rather well), install Cilium, let Cilium peer with the (goBGP) BGP Control-Plane, implement ClusterMesh.. well, let  Containerlab go for a real spin. But that seem to be a good reason to write another article.
 
 
