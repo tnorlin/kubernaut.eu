@@ -1059,6 +1059,13 @@ You can now interact with the API (but as there are no worker nodes deployed, on
     # kubectl get secrets this-is-secret -o jsonpath='{.data}'
     {"password":"bmljZXRyeQ==","username":"Y2hhcmxpZQ=="}
 
+    # kubectl version -o yaml
+    kubectl version
+    Client Version: v1.29.0-1+d15af86e9e661f
+    Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+    Server Version: v1.29.0-1+d15af86e9e661f
+
+
 What next? To be usable at least some Data Plane needs to be provisioned. An external node, a bhyve guest, a jail with runj.. but that's for another article, this was just about the Control Plane.
 
 A YouTube video is in the plan for coming days.
