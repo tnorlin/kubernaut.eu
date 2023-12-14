@@ -65,7 +65,7 @@ Fetch/compile/install the ETCD binaries from your source of choice:
 Then go ahead and create the certificates. As I've described it in earlier posts and I do have a plan to document another flow, I'll just put the necessary steps here, rather plain.
 Note that the names, amount of ETCD are set to three and the IP are set to the 192.168.168.0/24 CIDR (feel free to change the subnet, but keep in mind to do the corresponding on the control plane nodes as well, unless you are routing savy).
 
-As root, type the following (adapt the names/subnets as needed):
+As root, type the following (adapt the names/subnets as needed) in a bash shell:
 
     # Create a placeholder directory structure for CAs and the corresponding certificates
     mkdir -p /var/tmp/k8sbsd/{root-ca,kubernetes-ca,kubernetes-front-proxy-ca,etcd-ca}; cd /var/tmp/k8sbsd
