@@ -11,6 +11,8 @@ tags: [FreeBSD, Kubernetes, ETCD]
 
 Kubernetes v1.29 was recently released and I thought it was just about time that I gave it a try on FreeBSD.
 
+*edit: a typo in the scheduler section, fixed it below (changed sched to k8sched in the service definition).*
+
 ---
 
 I'm about to grow/replace one of the storage arrays and have a need to "burn-in"&#185; a new disk, so I decided to finally install FreeBSD on bare metal.
