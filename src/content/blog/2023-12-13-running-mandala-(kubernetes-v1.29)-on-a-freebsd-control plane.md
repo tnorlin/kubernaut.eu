@@ -934,8 +934,8 @@ As root, type following set of commands (or, if lazy, run the whole section belo
         name="k8sched"
         
         desc="Kubernetes Scheduler"
-        rcvar="sched_enable"
-        sched_flags="--config=/usr/local/etc/kube-scheduler.yaml --v=2"
+        rcvar="k8sched_enable"
+        k8sched_flags="--config=/usr/local/etc/kube-scheduler.yaml --v=2"
         command="/usr/local/sbin/kube-scheduler"
         command_args="> /var/log/kube-scheduler.log 2>&1 &";
         procname="/usr/local/sbin/kube-scheduler"
