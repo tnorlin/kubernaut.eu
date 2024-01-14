@@ -1,6 +1,7 @@
 ---
 title: Kubernetes on FreeBSD with Linux worker nodes and Cilium
 description: "This is the second part in a series where I describe how I set up a Kubernetes cluster on FreeBSD in my homelab. In this part we cover the worker nodes."
+featured: true
 pubDatetime: 2024-01-12T21:26:14.164Z
 draft: false
 tags: []
