@@ -1,5 +1,5 @@
 import type { CollectionEntry } from "astro:content";
-import postFilter from "./postFilter";
+import postFilter from "./tilsFilter";
 
 const getSortedPosts = (posts: CollectionEntry<"tils">[]) => {
   return posts

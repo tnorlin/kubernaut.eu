@@ -10,6 +10,7 @@ export interface Props {
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
   const { title, pubDatetime, modDatetime, description } = frontmatter;
+  const readtime = "";
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },

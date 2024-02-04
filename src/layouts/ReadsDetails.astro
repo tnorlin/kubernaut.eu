@@ -9,7 +9,6 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
-import { Tweet, Vimeo, YouTube } from "astro-embed";
 
 export interface Props {
   post: CollectionEntry<"reads">;
@@ -28,7 +27,7 @@ const {
   tags,
 } = post.data;
 
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -67,6 +66,7 @@ const layoutProps = {
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
+      readtime={remarkPluginFrontmatter.minutesRead}
       size="lg"
       className="my-2"
     />
