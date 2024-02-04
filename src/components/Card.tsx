@@ -28,11 +28,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <h3 {...headerProps}>{title}</h3>
         )}
       </a>
-      <Datetime
-        pubDatetime={pubDatetime}
-        modDatetime={modDatetime}
-        readtime={minutesRead}
-      />
+      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
       <p>{description}</p>
     </li>
   );
