@@ -1,7 +1,7 @@
 ---
 title: Blog upgraded
 description: "Upgraded the blog to the latest Astro release"
-pubDatetime: 2024-02-04T17:36:06.030Z
+pubDatetime: 2024-02-04T16:36:06.030Z
 draft: false
 tags: [blog, astro]
 ---
