@@ -3,6 +3,7 @@ import { LOCALE } from "@config";
 interface DatetimesProps {
   pubDatetime: string | Date;
   modDatetime: string | Date | undefined | null;
+  readtime: string;
 }
 
 interface Props extends DatetimesProps {
@@ -13,6 +14,7 @@ interface Props extends DatetimesProps {
 export default function Datetime({
   pubDatetime,
   modDatetime,
+  readtime,
   size = "sm",
   className,
 }: Props) {
@@ -39,16 +41,21 @@ export default function Datetime({
         <FormattedDatetime
           pubDatetime={pubDatetime}
           modDatetime={modDatetime}
+          readtime={readtime}
         />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
+const FormattedDatetime = ({
+  pubDatetime,
+  modDatetime,
+  readtime,
+}: DatetimesProps) => {
   const myDatetime = new Date(modDatetime ? modDatetime : pubDatetime);
 
-  const date = myDatetime.toLocaleDateString(LOCALE.langTag, {
+  const date = myDatetime.toLocaleDateString("sv-SE", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -65,6 +72,7 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
       <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
       <span className="text-nowrap">{time}</span>
+      <span className="text-nowrap"> {readtime}</span>
     </>
   );
 };

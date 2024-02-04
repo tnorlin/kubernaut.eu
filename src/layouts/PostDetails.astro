@@ -43,7 +43,7 @@ const ogUrl = new URL(
 
 const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
   .utc()
-  .format("HH:mm:ss DD MMMM YYYY UTC");
+  .format("YYYY-MM-DD HH:mm UTC");
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
@@ -76,11 +76,10 @@ const layoutProps = {
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}
+      readtime={remarkPluginFrontmatter.minutesRead}
       size="lg"
       className="my-2"
     />
-    {remarkPluginFrontmatter.minutesRead}
-    <p>Last Modified: {lastModified}</p>
 
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
