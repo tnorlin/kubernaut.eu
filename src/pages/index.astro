@@ -56,25 +56,25 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           (except MS Windows, sorry thats where my red line goes).
         </div>
       </div>
+      <p>
+        Read the blog posts or connect with me on
+        <LinkButton
+          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+          href="https://www.linkedin.com/in/tonynorlin/"
+        >
+          LinkedIn
+        </LinkButton> .
+      </p>
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
     </section>
-    <p>
-      Read the blog posts or connect with me on
-      <LinkButton
-        className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-        href="https://www.linkedin.com/in/tonynorlin/"
-      >
-        LinkedIn
-      </LinkButton> .
-    </p>
-    {
-      // only display if at least one social link is enabled
-      socialCount > 0 && (
-        <div class="social-wrapper">
-          <div class="social-links">Social Links:</div>
-          <Socials />
-        </div>
-      )
-    }
   </main>
 
   <Hr />

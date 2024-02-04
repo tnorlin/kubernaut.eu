@@ -28,8 +28,6 @@ Unfortunately, with limited time I was only showing a subset of what I initially
 
 [YouTube](https://www.youtube.com/watch?v=GEeevZFPMWU)
 
-<YouTube id="https://www.youtube.com/watch?v=GEeevZFPMWU" />
-
 The demo preparations was done in my ordinary environment, which happens to run an external Control Plane (in my port of [Kubernetes to illumos](https://github.com/tnorlin/kubernetes)), placed in another network segment (VLAN) than the Data Plane.
 
 While I had in mind to run my demos in that environment, I felt that it would perhaps have been counter-intuitive to demonstrate an environment that lacks components that most(?) Kubernetes users would perhaps expect to be there:
