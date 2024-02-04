@@ -3,7 +3,7 @@ import { LOCALE } from "@config";
 interface DatetimesProps {
   pubDatetime: string | Date;
   modDatetime: string | Date | undefined | null;
-  readtime: string;
+  readtime: string | undefined | null;
 }
 
 interface Props extends DatetimesProps {
@@ -72,7 +72,7 @@ const FormattedDatetime = ({
       <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
       <span className="text-nowrap">{time}</span>
-      <span className="text-nowrap"> {readtime}</span>
+      <span className="text-nowrap">&nbsp;{readtime}</span>
     </>
   );
 };
