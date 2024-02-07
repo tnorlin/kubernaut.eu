@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://kubernaut.eu/",
   author: "Tony Norlin",
-  desc: "A technical blog about the home lab adventures of the Kubernaut.",
+  desc: "A technical blog written by Tony Norlin about the home lab adventures of the Kubernaut.",
   title: "kubernaut.eu",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "astropaper-og.png",
   lightAndDarkMode: true,
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
