@@ -46,13 +46,13 @@ export const SOCIALS: SocialObjects = [
     name: "Twitter",
     href: "https://twitter.com/tnorlin",
     linkTitle: `tnorlin on Twitter`,
-    active: false,
+    active: true,
   },
   {
     name: "YouTube",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on YouTube`,
-    active: false,
+    href: "https://www.youtube.com/TonyNorlin",
+    linkTitle: `TonyNorlin on YouTube`,
+    active: true,
   },
   {
     name: "WhatsApp",
