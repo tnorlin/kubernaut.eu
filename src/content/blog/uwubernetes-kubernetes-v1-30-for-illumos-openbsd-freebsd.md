@@ -1,7 +1,7 @@
 ---
 title: Uwubernetes — Kubernetes v1.30 for illumos, OpenBSD (& FreeBSD)
 description: "Kubernetes v1.30 was released yesterday and although I have explored some interesting features in the upcoming Cilium v1.16 release..."
-pubDatetime: 2024-04-18T21:11:46.030Z
+pubDatetime: 2024-04-18T20:11:46.030Z
 draft: false
 tags: [FreeBSD, Kubernetes, illumos, OpenBSD, homelab]
 ---
