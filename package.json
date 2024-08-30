@@ -17,12 +17,12 @@
   "dependencies": {
     "@astro-community/astro-embed-integration": "^0.6.1",
     "@astro-community/astro-embed-youtube": "^0.4.4",
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.1.1",
-    "@astrojs/rss": "^4.0.4",
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/rss": "^4.0.7",
     "@giscus/react": "^2.4.0",
     "@resvg/resvg-js": "^2.6.0",
-    "astro": "^4.3.2",
+    "astro": "^4.15.1",
     "astro-auto-import": "^0.4.2",
     "astro-embed": "^0.6.1",
     "dayjs": "^1.11.10",
@@ -37,8 +37,8 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^3.0.9",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@divriots/jampack": "^0.23.3",
     "@tailwindcss/typography": "^0.5.10",
