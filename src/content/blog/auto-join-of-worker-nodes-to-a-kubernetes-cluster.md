@@ -18,7 +18,7 @@ keywords:
   - networking
 ---
 
-![alt text](/public/assets/datacentre.png)
+![An illustration of data centre](/assets/datacentre.png)
 
 ---
 
