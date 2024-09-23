@@ -2,7 +2,8 @@
 title: Autojoin of worker nodes to a Kubernetes cluster
 author: Tony Norlin
 description: Steps taken to enable worker nodes to automatically join a kubernetes cluster.
-pubDatetime: 2024-09-23T15:50:15.922Z
+featured: true
+pubDatetime: 2024-09-23T12:50:15.922Z
 draft: false
 tags:
   - kubernetes
