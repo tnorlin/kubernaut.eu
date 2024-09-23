@@ -1,4 +1,12 @@
 {
     "[markdown]": {
-    }
+    },
+    "frontMatter.content.pageFolders": [
+        {
+            "title": "Autojoin of worker nodes to a Kubernetes cluster",
+            "path": "[[workspace]]/src/content/blog"
+        }
+    ],
+    "frontMatter.content.publicFolder": "public",
+    "frontMatter.git.enabled": true
 }
