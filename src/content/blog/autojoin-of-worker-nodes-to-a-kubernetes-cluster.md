@@ -33,11 +33,16 @@ The next release of Cilium, v1.17, will bring a long awaited feature - a kub
 
 I went ahead and u̶p̶g̶r̶a̶d̶e̶d̶ (well, I sacrified current IPAM reservations and uninstalled/installed) Cilium to 1.17.0-pre.0 with the following helm values declared:
 
+```
 # Declare the Apiserver IP and Port
 
 K8S_API_SERVER=
 K8S_API_PORT=
+```
+
 Helm values override:
+
+```
 cat << EOF > cilium-helm-values.yaml
 USER-SUPPLIED VALUES:
 bgpControlPlane:
@@ -91,6 +96,7 @@ operator:
 replicas: 1
 rollOutCiliumPods: true
 EOF
+```
 
 At the same time, it was a great moment for me to upgrade to the Cilium BGP Control Plane v2 (https://docs.cilium.io/en/latest/network/bgp-control-plane/bgp-control-plane-v2/).
 
