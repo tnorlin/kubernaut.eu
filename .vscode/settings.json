@@ -7,6 +7,5 @@
             "path": "[[workspace]]/src/content/blog"
         }
     ],
-    "frontMatter.content.publicFolder": "public",
-    "frontMatter.git.enabled": true
+    "frontMatter.content.publicFolder": "public"
 }
