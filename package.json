@@ -1,6 +1,6 @@
 {
   "name": "kubernaut-eu",
-  "version": "4.2.0",
+  "version": "5.16.6",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
